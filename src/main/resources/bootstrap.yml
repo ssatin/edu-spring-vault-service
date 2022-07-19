@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: '@project.version@'
+  cloud:
+    vault:
+      kv:
+        enabled: ${spring.application.name}
+      enabled: false
+
+application:
+  concat:
+    prefix: my-prefix
+    suffix: my-suffix
