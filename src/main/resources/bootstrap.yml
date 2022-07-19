@@ -1,11 +1,12 @@
 spring:
   application:
-    name: '@project.version@'
+    name: '@project.artifactId@'
   cloud:
     vault:
       kv:
-        enabled: ${spring.application.name}
-      enabled: false
+        backend: edu
+      uri: http://localhost:8200
+      token: hvs.WKfJj0EjSHFg1J7e5HwDZGLY
 
 application:
   concat:

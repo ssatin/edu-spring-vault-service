@@ -12,11 +12,11 @@ public class ConcatenationController {
 
   private final ConcatenationProperties properties;
 
-  @GetMapping
+  @GetMapping("concat")
   public String concat(@RequestParam String first, @RequestParam String second) {
     return "prefix: " + properties.getPrefix()
         + ", first: " + first
         + ", second: " + second
-        + ", suffix" + properties.getSuffix();
+        + ", suffix: " + properties.getSuffix();
   }
 }
