@@ -3,10 +3,11 @@ spring:
     name: '@project.artifactId@'
   cloud:
     vault:
-      kv:
-        backend: edu
-      uri: http://localhost:8200
-      token: hvs.WKfJj0EjSHFg1J7e5HwDZGLY
+      enabled: false
+#      kv:
+#        backend: edu
+#      uri: http://localhost:8200
+#      token: hvs.WKfJj0EjSHFg1J7e5HwDZGLY
 
 application:
   concat:
