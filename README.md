@@ -12,7 +12,8 @@
 
 ### Локальный запуск Vault в docker
 
-1) запускаем команду docker run --cap-add=IPC_LOCK -e VAULT_DEV_ROOT_TOKEN_ID=myroot -p 8200:8200 vault
+1) запускаем команду 
+   `docker run --cap-add=IPC_LOCK -e VAULT_DEV_ROOT_TOKEN_ID=myroot -p 8200:8200 vault`
 2) в конце установки в консоли увидим запись вида: Root Token: qwerty - это root token, его необходимо скопировать
 3) открываем http://localhost:8200. В method выбираем Token, в token вставляем Root token
 4) создадим простраство kv (слева сверху +, выбрать kv, вводим имя: edu)
@@ -41,7 +42,7 @@ spring:
 7) запускаем приложение и делаем get: http://localhost:8080/concat?first=my-first&second=my-second
 В данном случае prefix и suffix получим из Vault - application
    
-8) создадим конфиг - edu-spring-vault-service
+8) создадим конфиг - `edu-spring-vault-service`
 
 ```json
 {
@@ -54,5 +55,5 @@ spring:
 ```
 
 9) запускаем приложение и делаем get: http://localhost:8080/concat?first=my-first&second=my-second
-В данном случае prefix получим из Vault - edu - edu-spring-vault-service, 
-а suffix получим из Vault - edu - application
+В данном случае prefix получим из Vault - edu - `edu-spring-vault-service`, 
+а suffix получим из Vault - edu - `application`
