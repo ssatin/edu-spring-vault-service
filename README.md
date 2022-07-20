@@ -12,8 +12,7 @@
 
 ### Локальный запуск Vault в docker
 
-1) запускаем команду docker run --cap-add=IPC_LOCK -e 'VAULT_DEV_ROOT_TOKEN_ID=myroot' -e '
-   VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:1234' -p 8200:8200 -p 1234:1234 vault
+1) запускаем команду docker run --cap-add=IPC_LOCK -e VAULT_DEV_ROOT_TOKEN_ID=myroot -p 8200:8200 vault
 2) в конце установки в консоли увидим запись вида: Root Token: qwerty - это root token, его необходимо скопировать
 3) открываем http://localhost:8200. В method выбираем Token, в token вставляем Root token
 4) создадим простраство kv (слева сверху +, выбрать kv, вводим имя: edu)
